@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaSadCry, FaSmile } from "react-icons/fa"
+import { FaSadCry, FaSmile } from "react-icons/fa";
 
 export default function Home() {
   const [randomNum, setRandomNum] = useState<any>(0);
@@ -17,7 +17,16 @@ export default function Home() {
 
   const onChangeHandler = (e: any) => {
     setClick(false);
-    setInputValue(e.target.value);
+
+    try {
+      if (e.target.value > 0 && e.target.value <= 10) {
+        setInputValue(e.target.value);
+      }
+    } catch (error) {
+      alert("Number must be between 1 to 10")
+    }
+
+    
   };
 
   return (
