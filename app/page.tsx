@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaSadCry, FaSmile } from "react-icons/fa";
+import { FaKickstarterK, FaSadCry, FaSmile } from "react-icons/fa";
 
 export default function Home() {
   const [randomNum, setRandomNum] = useState<any>(0);
@@ -24,7 +24,8 @@ export default function Home() {
       }
     } catch (error) {
       alert("Number must be between 1 to 10")
-    }
+    }FaKickstarterK
+    
 
     
   };
