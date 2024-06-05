@@ -18,16 +18,9 @@ export default function Home() {
   const onChangeHandler = (e: any) => {
     setClick(false);
 
-    try {
-      if (e.target.value > 0 && e.target.value <= 10) {
-        setInputValue(e.target.value);
-      }
-    } catch (error) {
-      alert("Number must be between 1 to 10")
-    }FaKickstarterK
-    
-
-    
+    if (e.target.value > 0 && e.target.value <= 10) {
+      setInputValue(e.target.value);
+    }
   };
 
   return (
@@ -40,7 +33,7 @@ export default function Home() {
         value={inputValue} // Bind the input field value to the state
         type="number"
         placeholder="Guess the number between 1 to 10"
-        className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md focus:text-green-800"
+        className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md focus:text-green-900"
       />
       <div className="m-8">
         <button
