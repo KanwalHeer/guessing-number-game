@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { FaSadCry, FaSmile } from "react-icons/fa";
+import { FaSadCry, FaSmile } from "react-icons/fa"
 
 export default function Home() {
   const [randomNum, setRandomNum] = useState<any>(0);
@@ -28,9 +28,9 @@ export default function Home() {
       <input
         onChange={onChangeHandler}
         value={inputValue} // Bind the input field value to the state
-        type="text"
+        type="number"
         placeholder="Guess the number between 1 to 10"
-        className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md"
+        className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md focus:text-green-800"
       />
       <div className="m-8">
         <button
