@@ -61,7 +61,6 @@ export default function Home() {
         className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md focus:text-green-900"
       />
       <div className="m-8">
-        &&{" "}
         <button
           onClick={handler}
           className="text-white m-2 bg-yellow-600 p-4 rounded-lg pl-8 pr-8 font-bold text-xl"
