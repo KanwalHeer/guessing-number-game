@@ -36,13 +36,15 @@ export default function Home() {
     setUserGuess(inputValue); // Store the user's guess before clearing the input
     setClick(true);
     setInputValue(""); // Clear the input field when the button is clicked
-  };
+  };        
 
   const onChangeHandler = (e: any) => {
     setClick(false);
     const value = parseInt(e.target.value, 10);
     if (value > 0 && value <= 10) {
       setInputValue(e.target.value);
+    } else {
+      setInputValue("");
     }
   };
 
@@ -55,7 +57,7 @@ export default function Home() {
       </h1>
       <input
         onChange={onChangeHandler}
-        value={inputValue} // Bind the input field value to the state
+       value={inputValue} // Bind the input field value to the state
         type="number"
         placeholder="Guess the number between 1 to 10"
         className="mt-8 p-4  rounded-lg border-2 border-yellow-600 w-full max-w-md focus:text-green-900"
